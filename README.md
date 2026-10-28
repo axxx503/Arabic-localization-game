@@ -23,6 +23,7 @@
 > - **Commercial Licensing & Profit Sharing**: If you wish to use this project commercially, you **must contact me first** via my social media accounts (**Instagram** or **TikTok** at https://bio.site/V7dt1) or **Email** (`v7dtads@gmail.com`), inform me about the project, and agree on **profit-sharing terms**.
 > - **Public Non-Commercial Sharing (Attribution Required)**: For free/public releases, simply **crediting my name (`V7dt1` / `axxx503`) in the localization credits** as a contributor/assistant via the prompt and general usage is sufficient.
 
+
 مشروع يقدّم **منهجية هندسية متكاملة + برومبت ذكي شامل + مهارة جاهزة (Skill) + أدوات بايثون آلية** لتعريب الألعاب بالكامل داخل اللعبة نفسها من الصفر، دون الحاجة إلى خبرة مسبقة في الهندسة العكسية أو معرفة محرك اللعبة.
 
 ---
@@ -119,6 +120,12 @@
 ### 4. حزم التثبيت الخفيفة المعتمدة على الكائنات (`Object-Level Patching`)
 بدلاً من إعادة توزيع ملفات اللعبة الأصلية الضخمة (التي قد يتجاوز حجمها 300 ميجابايت وتخالف حقوق النشر)، يقوم المثبّت في [`examples/over-the-hill/package/`](examples/over-the-hill/package/) بتخزين الكائنات المعدلة فقط (`~3.8 MB`)، ويتحقق من البصمة الرقمية `SHA-256` لملفات المستخدم الأصلية، ويأخذ نسخة احتياطية تلقائية قبل الحقن، مع أداة إزالة تستعيد اللعبة لحالتها الأصلية بنسبة 100%.
 
+### 5. بوابة النقاء اللغوي وحماية المتغيرات الشاملة (Linguistic Purity Gate v1.1)
+في التحديث v1.1 من [`toolkit/safe_arabic_shaper.py`](toolkit/safe_arabic_shaper.py)، تم توسيع نطاق حماية المتغيرات ليشمل كافة المحركات: `{...}` و `[...]` و `$VAR$` و `<tags>` و `#tags#!` و `@icons!` و `%s/%d`. كما أُضيفت "بوابة النقاء اللغوي" لمنع عكس اتجاه الأسطر اللاتينية غير المترجمة، والقضاء نهائياً على تشوه النصوص الهجينة (Frankenstein Text).
+
+### 6. أداة تدقيق وفحص الجودة الآلية (`toolkit/localization_qa_validator.py`)
+أداة فحص آلية سريعة وخفيفة تتيح للذكاء الاصطناعي والمطور التأكد من سلامة 100% من المتغيرات والأقواس، واكتشاف أي جمل مختلطة أو غير مكتملة، وحساب نسبة التغطية الحقيقية للتعريب قبل اعتماد الحزمة.
+
 ---
 
 ## 📂 هيكل المستودع (Repository Structure)
@@ -128,14 +135,15 @@ smart-arabic-game-localization/
 ├── README.md                                      # الدليل الشامل للمشروع (عربي / إنجليزي)
 ├── LICENSE                                        # شروط الاستخدام والنشر (غير تجاري + شرط ذكر الاسم)
 ├── prompts/
-│   ├── SMART_ARABIC_LOCALIZATION_PROMPT_AR.md     # برومبت التعريب الذكي للألعاب (النسخة العربية)
-│   └── SMART_ARABIC_LOCALIZATION_PROMPT_EN.md     # Smart Arabic Game Localization Prompt (English)
+│   ├── SMART_ARABIC_LOCALIZATION_PROMPT_AR.md     # برومبت التعريب الذكي للألعاب (النسخة العربية v1.1)
+│   └── SMART_ARABIC_LOCALIZATION_PROMPT_EN.md     # Smart Arabic Game Localization Prompt (English v1.1)
 ├── antigravity-skill/
 │   └── arabic-game-localization/
-│       └── SKILL.md                               # مهارة جاهزة للتثبيت في Google Antigravity IDE
+│       └── SKILL.md                               # مهارة محدثة للتثبيت في Google Antigravity IDE
 ├── toolkit/
 │   ├── requirements.txt                           # مكتبات بايثون المطلوبة
-│   ├── safe_arabic_shaper.py                      # أداة التشكيل والـ BiDi الآمن وحماية المتغيرات
+│   ├── safe_arabic_shaper.py                      # أداة التشكيل v1.1 مع بوابة النقاء اللغوي وحماية المتغيرات
+│   ├── localization_qa_validator.py               # أداة فحص الجودة الآلية وكشف النصوص الهجينة
 │   └── arabic_font_merger.py                      # أداة دمج الخطوط العربية وإصلاح جدول cmap واختبار FreeType
 └── examples/
     └── over-the-hill/                             # دراسة حالة تطبيقية كاملة: تعريب لعبة over the hill

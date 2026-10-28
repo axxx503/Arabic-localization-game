@@ -1,0 +1,7 @@
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.tmp
+backups/originals/
+extracted/test_build/
