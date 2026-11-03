@@ -1,5 +1,5 @@
 # 🎮 مشروع وأداة التعريب الذكي للألعاب بالذكاء الاصطناعي
-## Smart Arabic Game Localization Framework & Prompt (Antigravity IDE)
+## Smart Arabic Game Localization Framework & Prompt (Antigravity IDE ChatGPT Codex Claude Code)
 
 [![License: Non-Commercial / Custom](https://img.shields.io/badge/License-Non--Commercial-red.svg)](LICENSE)
 [![IDE: Google Antigravity](https://img.shields.io/badge/IDE-Google%20Antigravity-blue.svg)](https://deepmind.google)
@@ -35,7 +35,7 @@
 ## 🚀 طريقة الاستخدام خطوة بخطوة
 
 1. **تحميل البرومبت:** احصل على ملف البرومبت النصي من مجلد `prompts/` أو من قسم الإصدارات (`Releases`).
-2. **فتح البيئة:** افتح **Google Antigravity IDE**.
+2. **فتح البيئة:** افتح **Codex Claude Google Antigravity IDE**.
 3. **لصق المسار:** ضع مسار مجلد اللعبة في المكان المخصص أول البرومبت:
    ```text
    مسار اللعبة [C:\Program Files (x86)\Steam\steamapps\common\YourGame]
