@@ -35,7 +35,7 @@
 ## 🚀 طريقة الاستخدام خطوة بخطوة
 
 1. **تحميل البرومبت:** احصل على ملف البرومبت النصي من مجلد `prompts/` أو من قسم الإصدارات (`Releases`).
-2. **فتح البيئة:** افتح **Codex Claude Google Antigravity IDE**.
+2. **فتح البيئة:** افتح **ChatGPT Codex او Claude Code Google Antigravity IDE**.
 3. **لصق المسار:** ضع مسار مجلد اللعبة في المكان المخصص أول البرومبت:
    ```text
    مسار اللعبة [C:\Program Files (x86)\Steam\steamapps\common\YourGame]
