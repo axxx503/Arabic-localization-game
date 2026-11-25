@@ -1,5 +1,5 @@
 # 🎮 مشروع وأداة التعريب الذكي للألعاب بالذكاء الاصطناعي
-## Smart Arabic Game Localization Framework & Prompt (Antigravity IDE ChatGPT Codex Claude Code)
+## Smart Arabic Game Localization Framework(Antigravity IDE ChatGPT Codex Claude Code)
 
 [![License: Non-Commercial / Custom](https://img.shields.io/badge/License-Non--Commercial-red.svg)](LICENSE)
 [![IDE: Google Antigravity](https://img.shields.io/badge/IDE-Google%20Antigravity-blue.svg)](https://deepmind.google)
